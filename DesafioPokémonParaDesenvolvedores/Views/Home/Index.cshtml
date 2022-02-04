@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="text-center col-md-12">
+            <h1>Desafio Pokémon para Desenvolvedores</h1>
+            <strong>Cidade:</strong>  <input id="txtCity" type="text" />
+            <br />
+            <br />
+            <button id="btnSubmit">Pesquisar</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center col-md-12">
+
+            <h2>Resultado:</h2>
+            <table class="text-center col-md-12">
+
+                <tr>
+                    <td>Weather Symbol Icon <img id="imgWeatherIconUrl" src="" title="Weather Icon" /></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>Cidade: </strong>
+                        <span id="lblCity"></span>  ,
+                        <span id="lblCountry"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>Descrição:</strong>
+                        <label id="lblDescription"></label><br />
+                        <strong>Umidade:</strong>
+                        <label id="lblHumidity"></label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Temperatura: <label id="lblTemp"></label><br />
+                        @*Temperatura (Min): <label id="lblTempMin"></label><br />
+                        Temperatura (Max): <label id="lblTempMax"></label><br />*@
+                    </td>
+                </tr>
+
+            </table>
+
+
+        </div>
+
+        <div class="">
+            <h2>Pokémon referente ao clima da cidade: </h2><span id="nomePok"></span>
+            <img src="" id="imgPok" />
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+    $("#btnSubmit").click(function () {
+        var cityname = $("#txtCity").val();
+        if (cityname.length > 0) {
+            $.ajax(
+                {
+                    url: 'WeatherDetail?city=' + cityname,
+                    type: "POST",
+                    success: function (rsltval) {
+                        var data = JSON.parse(rsltval);
+                        console.log(data);
+                        $("#lblCity").text(data.City);
+                        $("#lblCountry").text(data.Country);
+                        $("#lblDescription").text(data.Description);
+                        $("#lblHumidity").text(data.Humidity + "  %");
+                        $("#lblTemp").text(data.Temp + "    °C");
+                        $("#imgWeatherIconUrl").attr("src", "http://openweathermap.org/img/w/" + data.WeatherIcon + ".png");
+                    },
+                    error: function () {
+                        alert("City Not Found");
+                    }
+                });
+        }
+        else {
+            alert("City Not Found");
+        }
+    });
+
+</script>
+<script src="~/Scripts/ScriptPokenon.js"></script>
