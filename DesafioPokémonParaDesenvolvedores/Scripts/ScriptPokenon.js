@@ -3,7 +3,7 @@
 
   //testando a temeperatura que corresponde com cada pokemon - não funciona desse jeito :(
   //var t = document.getElementById('lblTemp').nodeValue;
-  //if (t < 5) {
+  //if (t > 5) {
   //  url = 'https://pokeapi.co/api/v2/pokemon/583/';
   //}
   //else if (t >= 5 && t < 10) {
