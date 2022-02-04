@@ -1,31 +1,32 @@
 ﻿function pk() {
   let url = 'https://pokeapi.co/api/v2/pokemon/25/';
-  var t = document.getElementById('lblTemp').nodeValue;
-  //testando a temeperatura que corresponde com cada pokemon
-  if (t < 5) {
-    url = 'https://pokeapi.co/api/v2/pokemon/583/';
-  }
-  else if (t >= 5 && t < 10) {
-    url = 'https://pokeapi.co/api/v2/pokemon/87/';
-  }
-  else if (t >= 12 && t < 15) {
-    url = 'https://pokeapi.co/api/v2/pokemon/91/';
-  }
-  else if (t >= 15 && t < 21) {
-    url = 'https://pokeapi.co/api/v2/pokemon/131/';
-  }
-  else if (t >= 23 && t < 27) {
-    url = 'https://pokeapi.co/api/v2/pokemon/220/';
-  }
-  else if (t >= 27 && t < 33) {
-    url = 'https://pokeapi.co/api/v2/pokemon/215/';
-  }
-  else if (t > 33) {
-    url = 'https://pokeapi.co/api/v2/pokemon/144/';
-  }
-  else {
-    alert('caiu aqui');
-  }
+
+  //testando a temeperatura que corresponde com cada pokemon - não funciona desse jeito :(
+  //var t = document.getElementById('lblTemp').nodeValue;
+  //if (t < 5) {
+  //  url = 'https://pokeapi.co/api/v2/pokemon/583/';
+  //}
+  //else if (t >= 5 && t < 10) {
+  //  url = 'https://pokeapi.co/api/v2/pokemon/87/';
+  //}
+  //else if (t >= 12 && t < 15) {
+  //  url = 'https://pokeapi.co/api/v2/pokemon/91/';
+  //}
+  //else if (t >= 15 && t < 21) {
+  //  url = 'https://pokeapi.co/api/v2/pokemon/131/';
+  //}
+  //else if (t >= 23 && t < 27) {
+  //  url = 'https://pokeapi.co/api/v2/pokemon/220/';
+  //}
+  //else if (t >= 27 && t < 33) {
+  //  url = 'https://pokeapi.co/api/v2/pokemon/215/';
+  //}
+  //else if (t > 33) {
+  //  url = 'https://pokeapi.co/api/v2/pokemon/144/';
+  //}
+  //else {
+  //  alert('erro');
+  //}
   //fim dos testes
 
   //códigos para aparecer o pokémon na tela 

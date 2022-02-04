@@ -17,7 +17,7 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"></button>
-            @*   @Html.ActionLink("Desafio Pokémom para Devs", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            @Html.ActionLink("Desafio Pokémom para Devs", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
         </div>
     </div>
@@ -25,8 +25,8 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Desenvolvido po Guilherme Kal</p>
+        <footer class="text-center container-fluid">
+            <p>&copy; @DateTime.Now.Year - Desenvolvido por Guilherme Kal</p>
         </footer>
     </div>
 

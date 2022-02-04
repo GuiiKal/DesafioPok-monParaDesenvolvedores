@@ -1,6 +1,9 @@
 ﻿body {
   padding-top: 50px;
   padding-bottom: 20px;
+  background-image: url('https://pokemongolive.com/img/posts/anniversaryposter2019.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -23,6 +26,9 @@ textarea {
     max-width: 280px;
 }
 
-#Text1{
-    width: 200px;
+.container-fluid {
+  border: solid pink 2px;
+  background-color: #6ed1ffda;
+  margin-top: 50px;
 }
+
